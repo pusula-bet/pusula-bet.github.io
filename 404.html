@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="icon" type="image/webp" href="/img/favicon.webp">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sayfa Bulunamadı (404) — Pusulabet</title>
+<meta name="robots" content="noindex, follow">
+<meta http-equiv="refresh" content="4; url=/">
+<style>
+.pb-404{min-height:70vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 20px;gap:10px}
+.pb-404 .code{font-family:'Exo 2',sans-serif;font-size:84px;font-weight:800;color:var(--pb-yellow);line-height:1}
+.pb-404 h1{font-family:'Exo 2',sans-serif;font-size:22px;font-weight:700;color:#fff;border:none;padding:0;margin:6px 0}
+.pb-404 p{color:var(--pb-muted);font-size:14px;max-width:440px;margin:0 0 8px}
+.pb-404 .count{color:var(--pb-yellow);font-weight:700}
+</style>
+</head>
+<body>
+
+<header class="pb-header">
+  <div class="pb-logo">Pusula<span>bet</span></div>
+  <nav class="pb-nav" aria-label="Ana menü">
+    <a href="/#bonuslar">Bonuslar</a>
+    <a href="/#casino-oyunlari">Oyunlar</a>
+    <a href="/#spor-bahis">Spor Bahis</a>
+    <a href="/#odeme">Ödeme</a>
+    <a href="/#mobil">Mobil</a>
+  </nav>
+  <div class="pb-header-cta">
+    <a href="/go/" class="btn-outline">Giriş Yap</a>
+    <a href="/go/" class="btn-yellow">Kayıt Ol</a>
+  </div>
+</header>
+
+<div class="pb-404">
+  <div class="code">404</div>
+  <h1>Sayfa Bulunamadı</h1>
+  <p>Aradığınız sayfa taşınmış veya silinmiş olabilir. <span class="count" id="c">4</span> saniye içinde ana sayfaya yönlendiriliyorsunuz.</p>
+  <a href="/" class="btn-yellow-lg" style="max-width:240px">Ana Sayfaya Dön →</a>
+</div>
+
+<script>
+(function(){
+  var n=4,el=document.getElementById('c');
+  var t=setInterval(function(){
+    n--; if(el)el.textContent=n;
+    if(n<=0){clearInterval(t);window.location.replace('/');}
+  },1000);
+})();
+</script>
+</body>
+</html>
